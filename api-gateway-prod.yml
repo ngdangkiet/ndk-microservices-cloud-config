@@ -1,0 +1,87 @@
+spring:
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+  messages:
+    encoding: UTF-8
+    basename: classpath:i18n/messages
+  data:
+    redis:
+      host: caching-data
+      port: 6379
+  config:
+    import: configserver:http://config-server:8088
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui/index.html
+  api-docs:
+    path: /v3/api-docs
+
+hazelcast:
+  dkmicroservices:
+    address: hazelcast:5701
+    cluster_name: dev
+
+rate-limit:
+  limit: 2
+  seconds: 60
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+  exposed-headers: "*"
+
+security:
+  auth:
+    login-url: /api/v1/auth/login
+    header-name: Authorization
+    header-prefix: "Bearer "
+    secret-key: foobar_123456789_foobar_123456789_foobar_123456789_foobar_123456789
+
+grpc:
+  client:
+    grpc-department-service:
+      address: static://department-service:8010
+      negotiation-type: plaintext
+    grpc-employee-service:
+      address: static://employee-service:8020
+      negotiation-type: plaintext
+    grpc-auth-service:
+      address: static://auth-service:8040
+      negotiation-type: plaintext
+    grpc-notification-service:
+      address: static://notification-service:8050
+      negotiation-type: plaintext
+    grpc-location-service:
+      address: static://location-service:8060
+      negotiation-type: plaintext
+    grpc-tracking-service:
+      address: static://tracking-service:8070
+      negotiation-type: plaintext
+    grpc-recruitment-service:
+      address: static://recruitment-service:8080
+      negotiation-type: plaintext
+    grpc-attendance-service:
+      address: static://attendance-service:8090
+      negotiation-type: plaintext
+
+server:
+  port: 8003
+  error:
+    include-message: always
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka
+  instance:
+    hostname: api-gateway
+    prefer-ip-address: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0

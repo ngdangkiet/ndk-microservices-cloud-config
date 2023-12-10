@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://employee-postgres:5432/dkmicroservices_employee_db?createDatabaseIfNotExist=true&useEncoding=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  config:
+    import: configserver:http://config-server:8088
+    activate:
+      on-profile: prod
+
+server:
+  port: 8002
+
+grpc:
+  server:
+    port: 8020
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka
+  instance:
+    hostname: employee-service
+    prefer-ip-address: true
+    non-secure-port: ${grpc.server.port}
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
