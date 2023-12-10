@@ -14,9 +14,6 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  config:
-    import: configserver:http://config-server:8088
-
 server:
   port: 8001
 

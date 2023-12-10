@@ -32,9 +32,6 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  config:
-    import: configserver:http://localhost:8088
-
 server:
   port: 8005
 
@@ -45,7 +42,7 @@ grpc:
     grpc-employee-service:
       address: static://localhost:8020
       negotiation-type: plaintext
-      
+
 eureka:
   client:
     service-url:

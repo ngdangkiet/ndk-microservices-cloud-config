@@ -9,8 +9,6 @@ spring:
     redis:
       host: localhost
       port: 6379
-  config:
-    import: configserver:http://localhost:8088
 
 springdoc:
   swagger-ui:

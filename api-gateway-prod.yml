@@ -9,8 +9,6 @@ spring:
     redis:
       host: caching-data
       port: 6379
-  config:
-    import: configserver:http://config-server:8088
 
 springdoc:
   swagger-ui:

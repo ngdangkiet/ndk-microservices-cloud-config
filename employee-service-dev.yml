@@ -14,16 +14,13 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  config:
-    import: configserver:http://localhost:8088
-
 springbootwebfluxjwt:
   password:
     encoder:
       secret: dkmicroservices
       iteration: 33
       keyLength: 256
-      
+
 server:
   port: 8002
 

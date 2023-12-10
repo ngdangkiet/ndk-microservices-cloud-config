@@ -6,9 +6,6 @@ spring:
   elasticsearch:
     uris: http://tracking-elasticsearch:9200
 
-  config:
-    import: configserver:http://config-server:8088
-
 server:
   port: 8007
 
