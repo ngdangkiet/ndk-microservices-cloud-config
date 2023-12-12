@@ -18,9 +18,9 @@ spring:
     addresses: message-broker:5672
 
   datasource:
-    url: jdbc:postgresql://notification-postgres:5432/dkmicroservices_notification_db?createDatabaseIfNotExist=true&useEncoding=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
-    username: user
-    password: password
+    url: jdbc:postgresql://notification-postgres:5432/notification_db?createDatabaseIfNotExist=true&useEncoding=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+    username: ngdangkiet
+    password: root
     driver-class-name: org.postgresql.Driver
 
   jpa:
