@@ -82,3 +82,7 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  endpoints: # Actuator Prometheus Endpoint
+    web:
+      exposure:
+        include: prometheus
