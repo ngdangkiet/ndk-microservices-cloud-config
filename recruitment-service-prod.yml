@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://recruitment-postgres:5432/recruitment_db?createDatabaseIfNotExist=true&useEncoding=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:postgresql://postgres:5432/recruitment_db?createDatabaseIfNotExist=true&useEncoding=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useLegacyDatetimeCode=false&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
     username: ngdangkiet
     password: root
     driver-class-name: org.postgresql.Driver
