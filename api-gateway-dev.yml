@@ -65,6 +65,9 @@ grpc:
     grpc-attendance-service:
       address: static://localhost:8090
       negotiation-type: plaintext
+    grpc-payroll-service:
+      address: static://localhost:8110
+      negotiation-type: plaintext
 
 server:
   port: 8003
