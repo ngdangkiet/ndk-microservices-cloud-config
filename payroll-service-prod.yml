@@ -25,7 +25,7 @@ grpc:
       address: static://employee-service:8020
       negotiation-type: plaintext
     grpc-attendance-service:
-      address: static://employee-service:8090
+      address: static://attendance-service:8090
       negotiation-type: plaintext
 
 eureka:
