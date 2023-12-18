@@ -42,31 +42,67 @@ security:
 grpc:
   client:
     grpc-department-service:
+      host: department-service
+      port: 8010
       address: static://department-service:8010
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-employee-service:
+      host: employee-service
+      port: 8020
       address: static://employee-service:8020
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-auth-service:
+      host: auth-service
+      port: 8040
       address: static://auth-service:8040
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-notification-service:
+      host: notification-service
+      port: 8050
       address: static://notification-service:8050
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-location-service:
+      host: location-service
+      port: 8060
       address: static://location-service:8060
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-tracking-service:
+      host: tracking-service
+      port: 8070
       address: static://tracking-service:8070
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-recruitment-service:
+      host: recruitment-service
+      port: 8080
       address: static://recruitment-service:8080
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-attendance-service:
+      host: attendance-service
+      port: 8090
       address: static://attendance-service:8090
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-payroll-service:
+      host: payroll-service
+      port: 8110
       address: static://payroll-service:8110
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
 
 server:

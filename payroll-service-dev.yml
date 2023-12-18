@@ -22,10 +22,18 @@ grpc:
     port: 8110
   client:
     grpc-employee-service:
+      host: localhost
+      port: 8020
       address: static://localhost:8020
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-attendance-service:
+      host: localhost
+      port: 8090
       address: static://localhost:8090
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
 
 eureka:

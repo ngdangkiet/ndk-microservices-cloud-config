@@ -40,7 +40,11 @@ grpc:
     port: 8050
   client:
     grpc-employee-service:
+      host: employee-service
+      port: 8020
       address: static://employee-service:8020
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
 
 eureka:
