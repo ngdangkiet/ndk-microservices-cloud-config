@@ -43,30 +43,48 @@ grpc:
   client:
     grpc-department-service:
       address: static://localhost:8010
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-employee-service:
       address: static://localhost:8020
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-auth-service:
       address: static://localhost:8040
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-notification-service:
       address: static://localhost:8050
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-location-service:
       address: static://localhost:8060
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-tracking-service:
       address: static://localhost:8070
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-recruitment-service:
       address: static://localhost:8080
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-attendance-service:
       address: static://localhost:8090
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
     grpc-payroll-service:
       address: static://localhost:8110
+      enable-keep-alive: true
+      keep-alive-without-calls: true
       negotiation-type: plaintext
 
 server:
