@@ -20,6 +20,14 @@ server:
 grpc:
   server:
     port: 8090
+  client:
+    grpc-employee-service:
+      host: localhost
+      port: 8020
+      address: static://localhost:8020
+      enable-keep-alive: true
+      keep-alive-without-calls: true
+      negotiation-type: plaintext
 
 eureka:
   client:
