@@ -1,1 +1,2 @@
 ndk-microservices-cloud-config.iml
+../dkmicroservices/auth-service/.env
