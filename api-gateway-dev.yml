@@ -9,6 +9,15 @@ spring:
     redis:
       host: localhost
       port: 6379
+  cloud:
+    aws:
+      region:
+        static: ${REGION}
+      credentials:
+        accessKey: ${ACCESS_KEY_AWS}
+        secretKey: ${SECRET_KEY_AWS}
+  s3:
+    bucket-name: ${BUCKET_NAME}
 
 springdoc:
   swagger-ui:
